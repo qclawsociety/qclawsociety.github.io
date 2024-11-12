@@ -6,196 +6,204 @@
   <link rel="icon" type="image/jpg" href="favicon.jpg">
   <title>Queen's College Law Society</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #F4F4F4;
-      color: #2C2C2C;
-    }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F4F4F4;
+  color: #2C2C2C;
+}
 
-    /* Banner Section */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 15px 30px;
-      background-color: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(10px);
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-    }
+/* Banner Section */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
 
-    .logo img {
-      width: 80px;
-      height: auto;
-    }
+.logo img {
+  width: 80px;
+  height: auto;
+}
 
-    nav {
-      flex-grow: 1;
-      text-align: center;
-    }
+nav {
+  flex-grow: 1;
+  text-align: center;
+}
 
-    nav ul {
-      list-style-type: none;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #2C2C2C;
-      font-weight: bold;
-      padding: 10px;
-      transition: color 0.3s, border-bottom 0.3s;
-    }
+nav a {
+  text-decoration: none;
+  color: #2C2C2C;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
 
-    nav a:hover {
-      color: #FFC72C;
-      border-bottom: 2px solid #FFC72C;
-    }
+nav a:hover {
+  color: #FFC72C;
+  border-bottom: 2px solid #FFC72C;
+}
 
-    /* Hamburger Menu Icon */
-    .menu-icon {
-      display: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 5px;
-      padding: 10px;
-      justify-content: space-between;
-      width: 30px;
-      height: 25px;
-    }
+/* Hamburger Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+}
 
-    .menu-icon span {
-      display: block;
-      height: 4px;
-      width: 100%;
-      background-color: #2C2C2C;
-      border-radius: 5px;
-    }
+.menu-icon span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #2C2C2C;
+  border-radius: 5px;
+}
 
-    /* Mobile Menu */
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: #fff;
-      width: 100%;
-      height: 100vh;
-      z-index: 5;
-      text-align: center;
-      padding: 20px 0;
-      box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2);
-    }
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2);
+}
 
-    .mobile-menu ul {
-      list-style-type: none;
-      display: block;
-      gap: 20px;
-    }
+.mobile-menu ul {
+  list-style-type: none;
+  display: block;
+  gap: 20px;
+}
 
-    .mobile-menu a {
-      text-decoration: none;
-      color: #2C2C2C;
-      font-weight: bold;
-      font-size: 1.5em;
-      padding: 10px;
-      display: block;
-    }
+.mobile-menu a {
+  text-decoration: none;
+  color: #2C2C2C;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: 10px;
+  display: block;
+}
 
-    .mobile-menu a:hover {
-      color: #FFC72C;
-      border-bottom: 2px solid #FFC72C;
-    }
+.mobile-menu a:hover {
+  color: #FFC72C;
+  border-bottom: 2px solid #FFC72C;
+}
 
-    /* Homepage Sections */
-    .section {
-      width: 100%;
-      max-width: 1200px;
-      margin: 100px 0;
-      padding: 50px;
-      text-align: center;
-    }
+/* Homepage Sections */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px 0;
+  padding: 50px;
+  text-align: center;
+}
 
-    .section:nth-child(odd) {
-      background-color: #FFFFFF;
-    }
+.section:nth-child(odd) {
+  background-color: #FFFFFF;
+}
 
-    .section:nth-child(even) {
-      background-color: #2C2C2C;
-      color: #FFFFFF;
-    }
+.section:nth-child(even) {
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+}
 
-    .section h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
 
-    .section p {
-      font-size: 1.2em;
-      line-height: 1.6;
-    }
+.section p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
 
-    /* Footer */
-    footer {
-      width: 100%;
-      background-color: #2C2C2C;
-      color: #FFFFFF;
-      padding: 20px 0;
-      text-align: center;
-    }
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+  padding: 20px 0;
+  text-align: center;
+}
 
-    footer p {
-      font-size: 1em;
-    }
+footer p {
+  font-size: 1em;
+}
 
-    /* Media Queries */
-    @media screen and (max-width: 768px) {
-      header {
-        flex-direction: row;
-        justify-content: space-between;
-      }
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-      nav {
-        display: none;
-      }
+  nav {
+    display: none;
+    width: 100%;
+  }
 
-      .menu-icon {
-        display: flex;
-      }
+  .menu-icon {
+    display: flex;
+  }
 
-      .mobile-menu {
-        display: block;
-      }
-    }
+  .mobile-menu {
+    display: block;
+  }
 
-    @media screen and (max-width: 480px) {
-      .logo img {
-        width: 60px;
-      }
+  /* Adjust padding of sections to avoid overlap with fixed header */
+  .section {
+    padding-top: 80px; /* Added top padding for mobile screens */
+  }
+}
 
-      .section h2 {
-        font-size: 2em;
-      }
+@media screen and (max-width: 480px) {
+  .logo img {
+    width: 60px;
+  }
 
-      .section p {
-        font-size: 1em;
-      }
-    }
+  .section h2 {
+    font-size: 2em;
+  }
+
+  .section p {
+    font-size: 1em;
+  }
+}
   </style>
+
 </head>
 <body>
   <!-- Banner Section -->
