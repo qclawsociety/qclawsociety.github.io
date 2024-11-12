@@ -17,8 +17,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #F4F4F4; /* Light gray background */
-      color: #2C2C2C; /* Black text */
+      background-color: #F4F4F4;
+      color: #2C2C2C;
     }
 
     /* Banner Section */
@@ -28,8 +28,8 @@
       justify-content: space-between;
       width: 100%;
       padding: 15px 30px;
-      background-color: rgba(255, 255, 255, 0.65); /* Black background with slight transparency */
-      backdrop-filter: blur(10px); /* Blurring the background */
+      background-color: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(10px);
       position: fixed;
       top: 0;
       left: 0;
@@ -55,14 +55,14 @@
 
     nav a {
       text-decoration: none;
-      color: #2C2C2C ; /* Black text for nav links */
+      color: #2C2C2C;
       font-weight: bold;
       padding: 10px;
       transition: color 0.3s, border-bottom 0.3s;
     }
 
     nav a:hover {
-      color: #FFC72C; /* Yellow hover effect */
+      color: #FFC72C;
       border-bottom: 2px solid #FFC72C;
     }
 
@@ -76,12 +76,12 @@
     }
 
     .section:nth-child(odd) {
-      background-color: #FFFFFF; /* White background for alternating sections */
+      background-color: #FFFFFF;
     }
 
     .section:nth-child(even) {
-      background-color: #2C2C2C; /* Black background for alternating sections */
-      color: #FFFFFF; /* White text */
+      background-color: #2C2C2C;
+      color: #FFFFFF;
     }
 
     .section h2 {
@@ -97,8 +97,8 @@
     /* Footer */
     footer {
       width: 100%;
-      background-color: #2C2C2C; /* Black footer */
-      color: #FFFFFF; /* White text */
+      background-color: #2C2C2C;
+      color: #FFFFFF;
       padding: 20px 0;
       text-align: center;
     }
@@ -107,6 +107,73 @@
       font-size: 1em;
     }
 
+    /* Media Queries */
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+      }
+
+      .logo img {
+        width: 60px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding-left: 20px;
+      }
+
+      .section h2 {
+        font-size: 2em;
+      }
+
+      .section p {
+        font-size: 1em;
+      }
+
+      footer {
+        padding: 30px 0;
+      }
+
+      footer div {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      footer .quick-links {
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .logo img {
+        width: 50px;
+      }
+
+      nav ul {
+        gap: 10px;
+      }
+
+      .section h2 {
+        font-size: 1.8em;
+      }
+
+      .section p {
+        font-size: 0.9em;
+      }
+
+      footer {
+        padding: 25px 0;
+      }
+
+      footer div {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -156,7 +223,7 @@
         <div style="flex: 1; min-width: 200px; text-align: left; padding: 10px;">
             <h3 style="color: #ECECE9;">The Environment Matters</h3>
             <p>Email: <a href="mailto:newerearth@gmail.com" style="color: #ECECE9; text-decoration: none;">newereath@gmail.com</a></p>
-            <p>Phone: <a href="tel:+5926710475 style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
+            <p>Phone: <a href="tel:+5926710475" style="color: #ECECE9; text-decoration: none;">+592 671-0475</a></p>
         </div>
 
         <!-- Center Section: Social Media Links -->
@@ -188,3 +255,7 @@
         <p>&copy; 2024 Newer Earth. All rights reserved.</p>
     </div>
 </footer>
+
+</body>
+</html>
+
