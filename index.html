@@ -66,6 +66,61 @@
       border-bottom: 2px solid #FFC72C;
     }
 
+    /* Hamburger Menu Icon */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+    }
+
+    .menu-icon span {
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: #2C2C2C;
+      border-radius: 5px;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #fff;
+      width: 100%;
+      height: 100vh;
+      z-index: 5;
+      text-align: center;
+      padding: 20px 0;
+      box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-menu ul {
+      list-style-type: none;
+      display: block;
+      gap: 20px;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      color: #2C2C2C;
+      font-weight: bold;
+      font-size: 1.5em;
+      padding: 10px;
+      display: block;
+    }
+
+    .mobile-menu a:hover {
+      color: #FFC72C;
+      border-bottom: 2px solid #FFC72C;
+    }
+
     /* Homepage Sections */
     .section {
       width: 100%;
@@ -110,20 +165,26 @@
     /* Media Queries */
     @media screen and (max-width: 768px) {
       header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
+        flex-direction: row;
+        justify-content: space-between;
       }
 
+      nav {
+        display: none;
+      }
+
+      .menu-icon {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
       .logo img {
         width: 60px;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-        padding-left: 20px;
       }
 
       .section h2 {
@@ -132,46 +193,6 @@
 
       .section p {
         font-size: 1em;
-      }
-
-      footer {
-        padding: 30px 0;
-      }
-
-      footer div {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      footer .quick-links {
-        text-align: center;
-      }
-    }
-
-    @media screen and (max-width: 480px) {
-      .logo img {
-        width: 50px;
-      }
-
-      nav ul {
-        gap: 10px;
-      }
-
-      .section h2 {
-        font-size: 1.8em;
-      }
-
-      .section p {
-        font-size: 0.9em;
-      }
-
-      footer {
-        padding: 25px 0;
-      }
-
-      footer div {
-        flex-direction: column;
-        align-items: center;
       }
     }
   </style>
@@ -192,7 +213,24 @@
         <li><a href="register.html">Register</a></li>
       </ul>
     </nav>
+    <div class="menu-icon" id="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="register.html">Register</a></li>
+    </ul>
+  </div>
 
   <!-- Homepage Sections -->
   <section class="section">
